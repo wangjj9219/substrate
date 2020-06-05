@@ -334,7 +334,7 @@ decl_module! {
 		/// - DbWrites: `ProposalCount`, `Proposals`, `origin account`
 		/// # </weight>
 		#[weight = 120_000_000 + T::DbWeight::get().reads_writes(1, 2)]
-		fn propose_spend(
+		pub fn propose_spend(
 			origin,
 			#[compact] value: BalanceOf<T>,
 			beneficiary: <T::Lookup as StaticLookup>::Source

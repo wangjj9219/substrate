@@ -78,7 +78,7 @@ const PROPAGATE_TIMEOUT: time::Duration = time::Duration::from_millis(2900);
 /// Maximim number of known block hashes to keep for a peer.
 const MAX_KNOWN_BLOCKS: usize = 1024; // ~32kb per peer + LruHashSet overhead
 /// Maximim number of known extrinsic hashes to keep for a peer.
-const MAX_KNOWN_EXTRINSICS: usize = 4096; // ~128kb per peer + overhead
+const MAX_KNOWN_EXTRINSICS: usize = 10240; // ~128kb per peer + overhead
 
 /// Maximim number of transaction validation request we keep at any moment.
 const MAX_PENDING_TRANSACTIONS: usize = 8192;
